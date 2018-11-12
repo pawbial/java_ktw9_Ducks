@@ -2,16 +2,17 @@ package pl.sdacademy.design_patterns.duck;
 
 import pl.sdacademy.design_patterns.duck.Strategy.*;
 
-public class RubberDuck implements Duck {
+public class GreenWingedTealDuck implements Duck {
+
 
     private Quacking quackingStrategy;
     private Flying flyingStrategy;
     private Swimming swimmingStrategy;
 
-    public RubberDuck () {
-        quackingStrategy = new SqueakNotQuacking();
-        flyingStrategy = new FallingNotFlying();
-        swimmingStrategy = new Floating();
+    public GreenWingedTealDuck () {
+        quackingStrategy = new StandardQuacking();
+        flyingStrategy = new WingedFlying();
+        swimmingStrategy = new StandardSwimming();
     }
     @Override
     public void quack() {
