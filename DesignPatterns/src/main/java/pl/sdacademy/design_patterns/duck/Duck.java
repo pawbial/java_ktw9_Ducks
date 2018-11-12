@@ -8,5 +8,20 @@ public interface Duck {
 
     void  fly ();
 
+    Integer totalEggsLaid ();
 
-}
+    Integer duckAge ();
+
+    DuckEgg layEgg ();
+
+    void walkToDuckCoop (DuckCoop coop);
+
+    void notifyAboutEgg(DuckEgg egg);
+
+
+
+
+    }
+
+
+

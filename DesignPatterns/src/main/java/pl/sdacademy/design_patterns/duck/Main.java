@@ -1,7 +1,6 @@
 package pl.sdacademy.design_patterns.duck;
 
 import pl.sdacademy.design_patterns.duck.Singleton.FarmerEagerSingleton;
-import pl.sdacademy.design_patterns.duck.Strategy.Fodder;
 
 public class Main {
 
@@ -66,6 +65,32 @@ public class Main {
 
         System.out.println(singleton2.hashCode());
         System.out.println(singleton2.getDuckList().size());
+
+        System.out.println();
+        System.out.println();
+
+        FarmerEagerSingleton farmer = FarmerEagerSingleton.getInstance();
+        farmer.askVet();
+        System.out.println("=======");
+        farmer.askVet();
+
+        System.out.println("=========");
+
+        DuckCoop duckCoop = new DuckCoop();
+        mallardDuck.walkToDuckCoop(duckCoop);
+        greenWingedTealDuck.walkToDuckCoop(duckCoop);
+//        duckCoop.register(mallardDuck);
+//        duckCoop.register(greenWingedTealDuck);
+        mallardDuck.layEgg();
+
+        System.out.println("=======");
+
+        DuckFactory duckFactory = new DuckFactory();
+
+        Duck mallardDuck1 = duckFactory.createDuck(DuckType.MALLARDDUCK);
+        Duck greenWingedTealDuck1 = duckFactory.createDuck(DuckType.GREENWINGEDTEALDUCK);
+        Duck rubberDuck1 = duckFactory.createDuck(DuckType.RUBBERDUCK);
+
 
 
     }
